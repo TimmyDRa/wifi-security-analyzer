@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>Alerts</h3>
+  {% if alerts %}
+    <pre class="bg-dark text-white p-3 rounded">{% for a in alerts %}{{ a }}{% endfor %}</pre>
+  {% else %}
+    <div class="alert alert-info">No alert logs yet.</div>
+  {% endif %}
+{% endblock %}
