@@ -1,14 +1,4 @@
- python3 analyzer.py --scan
-Using interface: wlp4s0
-Place your finger on the fingerprint reader
-Verification timed out
-[sudo] password for timmy: 
-{'ssid': 'ghost', 'mac': 'FC:3F:FC:A9:7C:7D', 'signal': '-27'}
-{'ssid': 'ghost', 'mac': 'FE:3F:FC:C9:7C:7D', 'signal': '-24'}
-{'ssid': 'hola', 'mac': '98:A9:42:4A:FE:77', 'signal': '-77'}
-{'ssid': 'Fidel Wole', 'mac': 'BA:0D:D9:EF:BB:A0', 'signal': '-50'}
-{'ssid': 'Nothing less', 'mac': 'F2:A7:38:E1:56:DD', 'signal': '-83'}
-{'ssid': 'MTN-2.4G-685E1C', 'mac': 'FC:3F:FC:68:5E:25', 'signal': '-63'}
-{'ssid': 'MTN-5G-685E1C', 'mac': 'FC:3F:FC:68:5E:29', 'signal': '-71'}
-{'ssid': 'Fresh ', 'mac': '7A:C7:27:E2:55:70', 'signal': '-79'}
-{'ssid': 'hola', 'mac': '98:A9:42:8A:FE:77', 'signal': '-79'}
+Traceback (most recent call last):
+  File "/home/timmy/Documents/pecu/wifi-security-analyzer/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, redirect, url_for
+ModuleNotFoundError: No module named 'flask's
