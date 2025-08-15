@@ -1,0 +1,28 @@
+import os
+from datetime import datetime
+
+LOG_DIR = "logs"
+ALERT_FILE = os.path.join(LOG_DIR, "alerts.log")
+
+def ensure_logs():
+    os.makedirs(LOG_DIR, exist_ok=True)
+    if not os.path.exists(ALERT_FILE):
+        with open(ALERT_FILE, "w") as f:
+            f.write(f"{datetime.now()} - Log initialized\n")
+
+def alert(message):
+    ensure_logs()
+    timestamp = datetime.now().isoformat(sep=' ', timespec='seconds')
+    line = f"{timestamp} - {message}\n"
+    with open(ALERT_FILE, "a") as f:
+        f.write(line)
+    print("[ALERT]", line.strip())
+
+def read_alerts(last_n=100):
+    ensure_logs()
+    try:
+        with open(ALERT_FILE, "r") as f:
+            lines = f.readlines()
+            return lines[-last_n:]
+    except FileNotFoundError:
+        return []
