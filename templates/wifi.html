@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>WiFi Scan (interface: {{ iface }})</h3>
+  {% if networks %}
+    <ul class="list-group">
+      {% for n in networks %}
+        <li class="list-group-item">
+          <strong>{{ n.ssid or "(hidden)" }}</strong><br>
+          MAC: {{ n.mac }} | Signal: {{ n.signal }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <div class="alert alert-warning">No networks found or no interface available.</div>
+  {% endif %}
+{% endblock %}
