@@ -60,7 +60,7 @@ def process_dot11(pkt):
         wpa_present = False
 
         # parse Dot11Elt for SSID and RSN/WPA info
-        el = pkt.getlayer(Dot11Elt)~
+        el = pkt.getlayer(Dot11Elt)
         while isinstance(el, Dot11Elt):
             if el.ID == 0 and not ssid:
                 try:
