@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Security Analyzer - Sniffer</title>
+</head>
+<body>
+    <h2>Sniffer Status</h2>
+    <p><b>Packets Captured:</b> <span id="packetCount">0</span></p>
+
+    <script>
+        function updateStatus() {
+            fetch('/status')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('packetCount').innerText = data.packets;
+                });
+        }
+        setInterval(updateStatus, 2000);
+    </script>
+</body>
+</html>

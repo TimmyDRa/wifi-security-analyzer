@@ -1,0 +1,8 @@
+2025-08-17 18:22:12 - nmap not found. Install nmap with apt.
+2025-08-17 18:22:12 - Vulnerability scan initiated against 127.0.0.1
+2025-08-17 18:29:16 - Vulnerability scan initiated against 172.20.10.2
+2025-08-17 18:37:53 - iwlist scanning failed on wlan0: 255
+2025-08-18 06:54:49 - iwlist scanning failed on wlan0: 255
+2025-08-18 07:26:52 - Vulnerability scan initiated against 192.168.0.178
+2025-08-18 07:30:02 - iwlist scanning failed on wlan0: 255
+2025-08-18 07:30:16 - Vulnerability scan initiated against 

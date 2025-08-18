@@ -1,9 +1,45 @@
-{% extends "base.html" %}
-{% block content %}
-  <h3>Alerts</h3>
-  {% if alerts %}
-    <pre class="bg-dark text-white p-3 rounded">{% for a in alerts %}{{ a }}{% endfor %}</pre>
-  {% else %}
-    <div class="alert alert-info">No alert logs yet.</div>
-  {% endif %}
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Security Analyzer - Alerts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Alerts Dashboard</h2>
+    <p><b>Total Alerts:</b> <span id="alertCount">0</span></p>
+    <p><b>Last Alert:</b> <span id="lastAlert">None</span></p>
+
+    <canvas id="alertChart" width="400" height="200"></canvas>
+
+    <script>
+        const ctx = document.getElementById('alertChart').getContext('2d');
+        const alertChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Alerts'],
+                datasets: [{
+                    label: 'Alert Count',
+                    data: [0],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+
+        function updateAlerts() {
+            fetch('/status')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('alertCount').innerText = data.alerts;
+                    document.getElementById('lastAlert').innerText = data.last_alert || "None";
+                    alertChart.data.datasets[0].data[0] = data.alerts;
+                    alertChart.update();
+                });
+        }
+
+        setInterval(updateAlerts, 3000);
+    </script>
+</body>
+</html>
