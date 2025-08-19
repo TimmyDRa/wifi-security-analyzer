@@ -9,8 +9,35 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Path to config file
+CONFIG_PATH = "config_email.json"
+
 # Per-signature rate limiting memory
 _last_sent = {}
+
+
+def load_email_config():
+    """Load email configuration from JSON file."""
+    if not os.path.exists(CONFIG_PATH):
+        return {
+            "enabled": False,
+            "smtp_host": "smtp.gmail.com",
+            "smtp_port": 587,
+            "use_tls": True,
+            "username": "",
+            "password": "",
+            "from_addr": "",
+            "to_addrs": []
+        }
+    with open(CONFIG_PATH, "r") as f:
+        return json.load(f)
+
+
+def save_email_config(config):
+    """Save email configuration back to JSON file."""
+    with open(CONFIG_PATH, "w") as f:
+        json.dump(config, f, indent=2)
+
 
 def send_email(subject, body, key="default", min_seconds=60):
     """
@@ -25,21 +52,16 @@ def send_email(subject, body, key="default", min_seconds=60):
         return False  # Skip sending if too soon
 
     # Load config.json if present
-    config = {}
-    try:
-        with open("config_email.json", "r") as f:
-            config = json.load(f)
-    except FileNotFoundError:
-        pass
+    config = load_email_config()
 
     # Environment vars override config.json
-    email_user = os.getenv("EMAIL_USER", config.get("user"))
-    email_pass = os.getenv("EMAIL_PASS", config.get("pass"))
-    email_from = os.getenv("EMAIL_FROM", config.get("from", email_user))
-    email_to = os.getenv("EMAIL_TO", ",".join(config.get("to", [])))
-    smtp_host = os.getenv("SMTP_HOST", config.get("host", "smtp.gmail.com"))
-    smtp_port = int(os.getenv("SMTP_PORT", config.get("port", 587)))
-    smtp_tls = os.getenv("SMTP_USE_TLS", "true").lower() == "true"
+    email_user = os.getenv("EMAIL_USER", config.get("username"))
+    email_pass = os.getenv("EMAIL_PASS", config.get("password"))
+    email_from = os.getenv("EMAIL_FROM", config.get("from_addr", email_user))
+    email_to = os.getenv("EMAIL_TO", ",".join(config.get("to_addrs", [])))
+    smtp_host = os.getenv("SMTP_HOST", config.get("smtp_host", "smtp.gmail.com"))
+    smtp_port = int(os.getenv("SMTP_PORT", config.get("smtp_port", 587)))
+    smtp_tls = os.getenv("SMTP_USE_TLS", str(config.get("use_tls", True))).lower() == "true"
 
     if not email_user or not email_pass or not email_to:
         print("[!] Email not configured properly. Skipping send.")
