@@ -1,11 +1,11 @@
 {
   "enabled": true,
-  "smtp_host": "smtp-mail.outlook.com",
+  "smtp_host": "smtp.gmail.com",
   "smtp_port": 587,
   "use_tls": true,
-  "username": "Peculiarobasekidraws@outlook.com",
-  "password": "bkuaaotakcbzdakz",
-  "from_addr": "Peculiarobasekidraws@outlook.com",
+  "username": "peculiarobasekidraws@gmail.com",
+  "password": "wuuo exsz eblc xytr",
+  "from_addr": "peculiarobasekidraws@gmail.com",
   "to_addrs": [
     "testwifi@yopmail.com"
   ]

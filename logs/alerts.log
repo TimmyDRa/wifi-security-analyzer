@@ -4093,3 +4093,844 @@
 2025-08-20 23:41:31 - Deauthentication frame detected: aa:bb:cc:dd:ee:02 -> aa:bb:cc:dd:ee:01
 2025-08-20 23:41:44 - Possible port scan from 192.168.1.100: 51 unique dst ports (e.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...)
 2025-08-21 13:35:04 - Test email failed.
+2025-08-21 13:47:54 - Quick port scan initiated for 127.0.0.1
+2025-08-21 13:48:12 - Quick port scan completed for 127.0.0.1
+2025-08-21 13:48:26 - Starting packet sniffer on interface wlan0
+2025-08-21 13:48:42 - Packet sniffer started successfully on wlan0 (AsyncSniffer mode)
+2025-08-21 13:48:48 - Packet sniffer: 100 packets captured on wlan0
+2025-08-21 13:49:00 - Sniffer started on wlan0 via web.
+2025-08-21 13:49:00 - Packet sniffer: 200 packets captured on wlan0
+2025-08-21 13:49:14 - Packet sniffer: 300 packets captured on wlan0
+2025-08-21 13:49:29 - Packet sniffer: 400 packets captured on wlan0
+2025-08-21 13:49:42 - Packet sniffer: 500 packets captured on wlan0
+2025-08-21 13:49:56 - Packet sniffer: 600 packets captured on wlan0
+2025-08-21 13:50:11 - Packet sniffer: 700 packets captured on wlan0
+2025-08-21 13:50:28 - Packet sniffer: 800 packets captured on wlan0
+2025-08-21 13:50:48 - Packet sniffer: 900 packets captured on wlan0
+2025-08-21 13:51:12 - Packet sniffer: 1000 packets captured on wlan0
+2025-08-21 13:51:26 - Packet sniffer: 1100 packets captured on wlan0
+2025-08-21 13:51:40 - Packet sniffer: 1200 packets captured on wlan0
+2025-08-21 13:51:54 - Packet sniffer: 1300 packets captured on wlan0
+2025-08-21 13:52:08 - Packet sniffer: 1400 packets captured on wlan0
+2025-08-21 13:52:22 - Packet sniffer: 1500 packets captured on wlan0
+2025-08-21 13:52:33 - Packet sniffer: 1600 packets captured on wlan0
+2025-08-21 13:52:54 - Packet sniffer: 1700 packets captured on wlan0
+2025-08-21 13:53:06 - Packet sniffer: 1800 packets captured on wlan0
+2025-08-21 13:53:18 - Packet sniffer: 1900 packets captured on wlan0
+2025-08-21 13:53:30 - Packet sniffer: 2000 packets captured on wlan0
+2025-08-21 13:53:44 - Packet sniffer: 2100 packets captured on wlan0
+2025-08-21 13:54:01 - Packet sniffer: 2200 packets captured on wlan0
+2025-08-21 13:54:15 - Packet sniffer: 2300 packets captured on wlan0
+2025-08-21 13:54:32 - Packet sniffer: 2400 packets captured on wlan0
+2025-08-21 13:54:53 - Packet sniffer: 2500 packets captured on wlan0
+2025-08-21 13:55:15 - Packet sniffer: 2600 packets captured on wlan0
+2025-08-21 13:55:28 - Packet sniffer: 2700 packets captured on wlan0
+2025-08-21 13:55:42 - Packet sniffer: 2800 packets captured on wlan0
+2025-08-21 13:55:58 - Packet sniffer: 2900 packets captured on wlan0
+2025-08-21 13:56:14 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [60928, 53509, 16006, 44295, 65292, 53260, 51732, 54933, 22550, 39831]...)
+2025-08-21 13:56:27 - Packet sniffer: 3000 packets captured on wlan0
+2025-08-21 13:56:40 - Packet sniffer: 3100 packets captured on wlan0
+2025-08-21 13:56:55 - Packet sniffer: 3200 packets captured on wlan0
+2025-08-21 13:57:10 - Packet sniffer: 3300 packets captured on wlan0
+2025-08-21 13:57:25 - Packet sniffer: 3400 packets captured on wlan0
+2025-08-21 13:57:41 - Packet sniffer: 3500 packets captured on wlan0
+2025-08-21 13:57:56 - Packet sniffer: 3600 packets captured on wlan0
+2025-08-21 13:58:06 - Packet sniffer: 3700 packets captured on wlan0
+2025-08-21 13:58:20 - Packet sniffer: 3800 packets captured on wlan0
+2025-08-21 13:58:31 - Packet sniffer: 3900 packets captured on wlan0
+2025-08-21 13:58:47 - Packet sniffer: 4000 packets captured on wlan0
+2025-08-21 13:58:59 - Packet sniffer: 4100 packets captured on wlan0
+2025-08-21 13:59:12 - Packet sniffer: 4200 packets captured on wlan0
+2025-08-21 13:59:25 - Packet sniffer: 4300 packets captured on wlan0
+2025-08-21 13:59:27 - Packet sniffer: 4400 packets captured on wlan0
+2025-08-21 13:59:33 - Packet sniffer: 4500 packets captured on wlan0
+2025-08-21 13:59:35 - Packet sniffer: 4600 packets captured on wlan0
+2025-08-21 13:59:39 - Packet sniffer: 4700 packets captured on wlan0
+2025-08-21 13:59:40 - Packet sniffer: 4800 packets captured on wlan0
+2025-08-21 13:59:40 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 13:59:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 13:59:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 13:59:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 13:59:50 - Packet sniffer: 4900 packets captured on wlan0
+2025-08-21 13:59:50 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [44675, 44549, 64902, 24457, 61838, 41872, 39570, 29330, 50198, 46615]...)
+2025-08-21 13:59:51 - Packet sniffer: 5000 packets captured on wlan0
+2025-08-21 13:59:56 - Packet sniffer: 5100 packets captured on wlan0
+2025-08-21 13:59:59 - ICMP flood suspected from 172.20.10.2: 153 ICMP packets in 10s
+2025-08-21 14:00:00 - Packet sniffer: 5200 packets captured on wlan0
+2025-08-21 14:00:00 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:00:00 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:00:00 - Packet sniffer: 5300 packets captured on wlan0
+2025-08-21 14:00:02 - Packet sniffer: 5400 packets captured on wlan0
+2025-08-21 14:00:04 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:00:04 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:00:04 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:00:07 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:00:09 - Packet sniffer: 5500 packets captured on wlan0
+2025-08-21 14:00:11 - Packet sniffer: 5600 packets captured on wlan0
+2025-08-21 14:00:17 - Packet sniffer: 5700 packets captured on wlan0
+2025-08-21 14:00:23 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [56832, 50689, 34178, 43265, 50946, 41989, 46072, 48264, 53643, 1804]...)
+2025-08-21 14:00:24 - Packet sniffer: 5800 packets captured on wlan0
+2025-08-21 14:00:29 - Packet sniffer: 5900 packets captured on wlan0
+2025-08-21 14:00:42 - Packet sniffer: 6000 packets captured on wlan0
+2025-08-21 14:00:44 - Packet sniffer: 6100 packets captured on wlan0
+2025-08-21 14:00:49 - Packet sniffer: 6200 packets captured on wlan0
+2025-08-21 14:00:57 - Packet sniffer: 6300 packets captured on wlan0
+2025-08-21 14:01:04 - Packet sniffer: 6400 packets captured on wlan0
+2025-08-21 14:01:09 - Packet sniffer: 6500 packets captured on wlan0
+2025-08-21 14:01:11 - Packet sniffer: 6600 packets captured on wlan0
+2025-08-21 14:01:11 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:11 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:11 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:01:12 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:01:12 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:01:12 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:01:12 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:01:12 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:01:13 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:01:19 - Packet sniffer: 6700 packets captured on wlan0
+2025-08-21 14:01:22 - Packet sniffer: 6800 packets captured on wlan0
+2025-08-21 14:01:31 - Packet sniffer: 6900 packets captured on wlan0
+2025-08-21 14:01:34 - Packet sniffer: 7000 packets captured on wlan0
+2025-08-21 14:01:41 - Packet sniffer: 7100 packets captured on wlan0
+2025-08-21 14:01:44 - Packet sniffer: 7200 packets captured on wlan0
+2025-08-21 14:01:44 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [14593, 42888, 54539, 59788, 46349, 51855, 33680, 41874, 39455, 4511]...)
+2025-08-21 14:01:48 - Packet sniffer: 7300 packets captured on wlan0
+2025-08-21 14:01:50 - ICMP flood suspected from 172.20.10.2: 160 ICMP packets in 10s
+2025-08-21 14:01:50 - Packet sniffer: 7400 packets captured on wlan0
+2025-08-21 14:01:51 - ICMP flood suspected from 172.20.10.2: 179 ICMP packets in 10s
+2025-08-21 14:01:52 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:53 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:53 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:01:53 - Packet sniffer: 7500 packets captured on wlan0
+2025-08-21 14:01:54 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:01:54 - ICMP flood suspected from 172.20.10.2: 185 ICMP packets in 10s
+2025-08-21 14:01:54 - ICMP flood suspected from 172.20.10.2: 172 ICMP packets in 10s
+2025-08-21 14:01:55 - Packet sniffer: 7600 packets captured on wlan0
+2025-08-21 14:01:55 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:55 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:56 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:56 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:56 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:56 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:57 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:57 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:57 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:57 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:57 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:58 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:01:58 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:01:58 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:01:58 - Packet sniffer: 7700 packets captured on wlan0
+2025-08-21 14:01:58 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:01 - Packet sniffer: 7800 packets captured on wlan0
+2025-08-21 14:02:04 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [44416, 38272, 37632, 46341, 44680, 52489, 39948, 59789, 47245, 21535]...)
+2025-08-21 14:02:07 - Packet sniffer: 7900 packets captured on wlan0
+2025-08-21 14:02:08 - Packet sniffer: 8000 packets captured on wlan0
+2025-08-21 14:02:08 - ICMP flood suspected from 172.20.10.2: 186 ICMP packets in 10s
+2025-08-21 14:02:09 - Packet sniffer: 8100 packets captured on wlan0
+2025-08-21 14:02:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:09 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:09 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:10 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:10 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:02:10 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:02:10 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:02:10 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:02:11 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:02:11 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:11 - Packet sniffer: 8200 packets captured on wlan0
+2025-08-21 14:02:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:13 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:14 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:14 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:14 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:02:14 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:02:17 - Packet sniffer: 8300 packets captured on wlan0
+2025-08-21 14:02:20 - Packet sniffer: 8400 packets captured on wlan0
+2025-08-21 14:02:25 - Packet sniffer: 8500 packets captured on wlan0
+2025-08-21 14:02:25 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [38529, 65025, 54405, 49160, 56840, 46984, 40971, 54157, 17553, 51093]...)
+2025-08-21 14:02:29 - Packet sniffer: 8600 packets captured on wlan0
+2025-08-21 14:02:30 - Packet sniffer: 8700 packets captured on wlan0
+2025-08-21 14:02:34 - Packet sniffer: 8800 packets captured on wlan0
+2025-08-21 14:02:34 - Packet sniffer: 8900 packets captured on wlan0
+2025-08-21 14:02:35 - Packet sniffer: 9000 packets captured on wlan0
+2025-08-21 14:02:37 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:37 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:38 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:38 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:39 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:02:39 - High traffic burst from 142.250.184.3: 201 packets in 10s
+2025-08-21 14:02:39 - High traffic burst from 142.250.184.3: 202 packets in 10s
+2025-08-21 14:02:39 - High traffic burst from 142.250.184.3: 203 packets in 10s
+2025-08-21 14:02:39 - High traffic burst from 142.250.184.3: 204 packets in 10s
+2025-08-21 14:02:40 - Packet sniffer: 9100 packets captured on wlan0
+2025-08-21 14:02:40 - Packet sniffer: 9200 packets captured on wlan0
+2025-08-21 14:02:40 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:41 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:41 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:41 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:41 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:02:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:42 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:42 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:43 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:43 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:44 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:44 - Packet sniffer: 9300 packets captured on wlan0
+2025-08-21 14:02:44 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [45314, 46468, 47880, 28940, 34957, 56590, 52884, 34200, 4250, 33306]...)
+2025-08-21 14:02:44 - Packet sniffer: 9400 packets captured on wlan0
+2025-08-21 14:02:45 - Possible port scan from 52.98.16.214: 51 unique dst ports (e.g. [53124, 55046, 55048, 53002, 53006, 35600, 53008, 35602, 53138, 35604]...)
+2025-08-21 14:02:45 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:45 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:45 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:45 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:48 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:48 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:49 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:49 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:49 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:49 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:02:49 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:02:52 - Packet sniffer: 9500 packets captured on wlan0
+2025-08-21 14:02:54 - Packet sniffer: 9600 packets captured on wlan0
+2025-08-21 14:02:56 - Packet sniffer: 9700 packets captured on wlan0
+2025-08-21 14:02:57 - Packet sniffer: 9800 packets captured on wlan0
+2025-08-21 14:02:58 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:58 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:02:58 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:58 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:59 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:59 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:59 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:02:59 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:00 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:00 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:00 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:00 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:01 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:02 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:02 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:02 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:03 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:03 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:03 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:03 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:03 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:03:05 - ICMP flood suspected from 172.20.10.2: 208 ICMP packets in 10s
+2025-08-21 14:03:06 - Packet sniffer: 9900 packets captured on wlan0
+2025-08-21 14:03:06 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [58625, 37380, 49290, 38926, 34194, 41107, 35860, 44950, 36630, 49048]...)
+2025-08-21 14:03:07 - Packet sniffer: 10000 packets captured on wlan0
+2025-08-21 14:03:07 - Packet sniffer: 10100 packets captured on wlan0
+2025-08-21 14:03:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:08 - Packet sniffer: 10200 packets captured on wlan0
+2025-08-21 14:03:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:12 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:12 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:12 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:12 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:13 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:14 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:14 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:14 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:14 - Packet sniffer: 10300 packets captured on wlan0
+2025-08-21 14:03:15 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:15 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:15 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:15 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:03:15 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:03:16 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:18 - Packet sniffer: 10400 packets captured on wlan0
+2025-08-21 14:03:19 - Packet sniffer: 10500 packets captured on wlan0
+2025-08-21 14:03:20 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [46336, 47235, 39173, 33158, 7174, 51849, 46220, 59404, 54286, 53004]...)
+2025-08-21 14:03:20 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:20 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:03:21 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:03:22 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:22 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:22 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:22 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:22 - Packet sniffer: 10600 packets captured on wlan0
+2025-08-21 14:03:22 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:23 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:24 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:25 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:26 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:26 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:26 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:26 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:26 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:27 - Packet sniffer: 10700 packets captured on wlan0
+2025-08-21 14:03:29 - ICMP flood suspected from 172.20.10.2: 110 ICMP packets in 10s
+2025-08-21 14:03:29 - Packet sniffer: 10800 packets captured on wlan0
+2025-08-21 14:03:30 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:30 - Packet sniffer: 10900 packets captured on wlan0
+2025-08-21 14:03:33 - Packet sniffer: 11000 packets captured on wlan0
+2025-08-21 14:03:37 - Packet sniffer: 11100 packets captured on wlan0
+2025-08-21 14:03:37 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:37 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:37 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:03:38 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:03:39 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:03:39 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:03:39 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:03:39 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:03:39 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [52992, 54657, 6662, 35849, 34057, 51596, 45073, 48018, 37908, 50174]...)
+2025-08-21 14:03:39 - Packet sniffer: 11200 packets captured on wlan0
+2025-08-21 14:03:40 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:40 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:40 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:40 - Packet sniffer: 11300 packets captured on wlan0
+2025-08-21 14:03:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:41 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:43 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:43 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:43 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:43 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:43 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:43 - Packet sniffer: 11400 packets captured on wlan0
+2025-08-21 14:03:44 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:44 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:46 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:47 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:47 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:47 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:47 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:47 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:48 - Packet sniffer: 11500 packets captured on wlan0
+2025-08-21 14:03:49 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [39951, 57616, 52625, 37270, 33816, 42786, 55203, 44578, 58658, 43434]...)
+2025-08-21 14:03:51 - Packet sniffer: 11600 packets captured on wlan0
+2025-08-21 14:03:55 - Packet sniffer: 11700 packets captured on wlan0
+2025-08-21 14:03:57 - Packet sniffer: 11800 packets captured on wlan0
+2025-08-21 14:03:57 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:57 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:57 - Packet sniffer: 11900 packets captured on wlan0
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:03:58 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:03:59 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:04:00 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:04:00 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:04:00 - High traffic burst from 172.20.10.2: 215 packets in 10s
+2025-08-21 14:04:00 - High traffic burst from 172.20.10.2: 216 packets in 10s
+2025-08-21 14:04:01 - High traffic burst from 172.20.10.2: 217 packets in 10s
+2025-08-21 14:04:01 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:04:03 - Packet sniffer: 12000 packets captured on wlan0
+2025-08-21 14:04:04 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [24065, 40196, 53511, 45576, 57737, 40839, 37130, 58638, 46994, 59795]...)
+2025-08-21 14:04:04 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:04 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:04 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:04 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:04:05 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:04:06 - Packet sniffer: 12100 packets captured on wlan0
+2025-08-21 14:04:06 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:06 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:06 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:07 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:07 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:07 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:07 - Packet sniffer: 12200 packets captured on wlan0
+2025-08-21 14:04:08 - Packet sniffer: 12300 packets captured on wlan0
+2025-08-21 14:04:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:08 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:09 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:10 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:11 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:04:11 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:04:11 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:04:11 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:04:11 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:04:12 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:04:13 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:04:13 - High traffic burst from 172.20.10.2: 215 packets in 10s
+2025-08-21 14:04:13 - High traffic burst from 172.20.10.2: 216 packets in 10s
+2025-08-21 14:04:13 - High traffic burst from 172.20.10.2: 217 packets in 10s
+2025-08-21 14:04:13 - Packet sniffer: 12400 packets captured on wlan0
+2025-08-21 14:04:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:14 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:15 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:15 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:15 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:15 - Packet sniffer: 12500 packets captured on wlan0
+2025-08-21 14:04:15 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:15 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:16 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:16 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [34816, 35846, 43913, 34831, 39697, 39058, 58257, 45723, 34587, 52766]...)
+2025-08-21 14:04:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:17 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:17 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:17 - Packet sniffer: 12600 packets captured on wlan0
+2025-08-21 14:04:17 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:18 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:18 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:18 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:21 - Packet sniffer: 12700 packets captured on wlan0
+2025-08-21 14:04:21 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:21 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:22 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:22 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:22 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:22 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:23 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:24 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:24 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:24 - Packet sniffer: 12800 packets captured on wlan0
+2025-08-21 14:04:24 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [34699, 48395, 59275, 39440, 47377, 50834, 60565, 35746, 33828, 54692]...)
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:25 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:26 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:26 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:26 - Packet sniffer: 12900 packets captured on wlan0
+2025-08-21 14:04:26 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:26 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:27 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:28 - Packet sniffer: 13000 packets captured on wlan0
+2025-08-21 14:04:28 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:28 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:28 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:28 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:29 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:04:29 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:04:29 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:04:29 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:04:29 - Packet sniffer: 13100 packets captured on wlan0
+2025-08-21 14:04:29 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:04:30 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 215 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:31 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:32 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:32 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [47232, 60032, 33411, 53892, 34053, 51078, 35590, 37509, 44682, 40079]...)
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:34 - Packet sniffer: 13200 packets captured on wlan0
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:36 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:04:38 - Packet sniffer: 13300 packets captured on wlan0
+2025-08-21 14:04:38 - Possible port scan from 52.98.21.38: 51 unique dst ports (e.g. [47872, 47746, 47876, 47754, 35852, 47884, 47634, 35860, 47892, 35862]...)
+2025-08-21 14:04:38 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [52353, 36866, 36484, 50054, 40590, 36240, 45328, 56853, 34583, 40471]...)
+2025-08-21 14:04:39 - Packet sniffer: 13400 packets captured on wlan0
+2025-08-21 14:04:42 - Packet sniffer: 13500 packets captured on wlan0
+2025-08-21 14:04:49 - Packet sniffer: 13600 packets captured on wlan0
+2025-08-21 14:05:01 - Packet sniffer: 13700 packets captured on wlan0
+2025-08-21 14:05:09 - Packet sniffer: 13800 packets captured on wlan0
+2025-08-21 14:05:30 - Packet sniffer: 13900 packets captured on wlan0
+2025-08-21 14:05:45 - Packet sniffer: 14000 packets captured on wlan0
+2025-08-21 14:05:58 - Packet sniffer: 14100 packets captured on wlan0
+2025-08-21 14:06:11 - Packet sniffer: 14200 packets captured on wlan0
+2025-08-21 14:06:23 - Packet sniffer: 14300 packets captured on wlan0
+2025-08-21 14:06:31 - Packet sniffer: 14400 packets captured on wlan0
+2025-08-21 14:06:46 - Packet sniffer: 14500 packets captured on wlan0
+2025-08-21 14:07:03 - Packet sniffer: 14600 packets captured on wlan0
+2025-08-21 14:07:10 - Packet sniffer: 14700 packets captured on wlan0
+2025-08-21 14:07:11 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [40065, 63363, 46851, 40581, 60296, 37129, 55435, 47116, 37532, 13727]...)
+2025-08-21 14:07:11 - Packet sniffer: 14800 packets captured on wlan0
+2025-08-21 14:07:11 - Packet sniffer: 14900 packets captured on wlan0
+2025-08-21 14:07:12 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:12 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:12 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:13 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:13 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:13 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:13 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:07:14 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:07:15 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:15 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:07:15 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:07:15 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:07:15 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:07:16 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:07:16 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:07:16 - Packet sniffer: 15000 packets captured on wlan0
+2025-08-21 14:07:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:16 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:16 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:17 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:07:18 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:07:19 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:19 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:07:19 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:07:19 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:07:19 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:20 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:07:20 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:07:20 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:20 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:20 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:07:20 - Packet sniffer: 15100 packets captured on wlan0
+2025-08-21 14:07:21 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:21 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:23 - Packet sniffer: 15200 packets captured on wlan0
+2025-08-21 14:07:24 - ICMP flood suspected from 172.20.10.2: 115 ICMP packets in 10s
+2025-08-21 14:07:24 - Packet sniffer: 15300 packets captured on wlan0
+2025-08-21 14:07:26 - Packet sniffer: 15400 packets captured on wlan0
+2025-08-21 14:07:28 - Packet sniffer: 15500 packets captured on wlan0
+2025-08-21 14:07:28 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [44545, 38407, 38921, 39310, 53392, 46225, 7570, 58258, 33559, 53783]...)
+2025-08-21 14:07:28 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:28 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:29 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:30 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:07:31 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:07:32 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:07:33 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:07:33 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:07:33 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:07:33 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:07:33 - Packet sniffer: 15600 packets captured on wlan0
+2025-08-21 14:07:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:07:34 - Packet sniffer: 15700 packets captured on wlan0
+2025-08-21 14:07:46 - Packet sniffer: 15800 packets captured on wlan0
+2025-08-21 14:07:49 - Possible port scan from 52.98.16.198: 51 unique dst ports (e.g. [52480, 50176, 50050, 42884, 35976, 51848, 50186, 46602, 56332, 50060]...)
+2025-08-21 14:07:50 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [40067, 58372, 43527, 33289, 33291, 53759, 37646, 32783, 55696, 54035]...)
+2025-08-21 14:07:56 - Packet sniffer: 15900 packets captured on wlan0
+2025-08-21 14:08:00 - Packet sniffer: 16000 packets captured on wlan0
+2025-08-21 14:08:09 - Packet sniffer: 16100 packets captured on wlan0
+2025-08-21 14:08:14 - Packet sniffer: 16200 packets captured on wlan0
+2025-08-21 14:08:14 - Packet sniffer: 16300 packets captured on wlan0
+2025-08-21 14:08:19 - Packet sniffer: 16400 packets captured on wlan0
+2025-08-21 14:08:19 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:08:19 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:08:20 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:08:21 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:08:22 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:08:23 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:08:23 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:08:23 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:08:23 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:08:23 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:08:24 - Packet sniffer: 16500 packets captured on wlan0
+2025-08-21 14:08:24 - Packet sniffer: 16600 packets captured on wlan0
+2025-08-21 14:08:24 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [44678, 46219, 41100, 41489, 49171, 35221, 48791, 50458, 40091, 60571]...)
+2025-08-21 14:08:27 - Packet sniffer: 16700 packets captured on wlan0
+2025-08-21 14:08:44 - Packet sniffer: 16800 packets captured on wlan0
+2025-08-21 14:08:49 - Packet sniffer: 16900 packets captured on wlan0
+2025-08-21 14:09:03 - Packet sniffer: 17000 packets captured on wlan0
+2025-08-21 14:09:10 - Packet sniffer: 17100 packets captured on wlan0
+2025-08-21 14:09:22 - Packet sniffer: 17200 packets captured on wlan0
+2025-08-21 14:09:32 - Packet sniffer: 17300 packets captured on wlan0
+2025-08-21 14:09:33 - Packet sniffer: 17400 packets captured on wlan0
+2025-08-21 14:09:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:09:34 - Packet sniffer: 17500 packets captured on wlan0
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:09:35 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:09:36 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:09:36 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:09:36 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:09:36 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:09:36 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:09:37 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:09:37 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:09:37 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:09:37 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:09:37 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 212 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 213 packets in 10s
+2025-08-21 14:09:38 - High traffic burst from 172.20.10.2: 214 packets in 10s
+2025-08-21 14:09:39 - High traffic burst from 172.20.10.2: 215 packets in 10s
+2025-08-21 14:09:39 - High traffic burst from 172.20.10.2: 216 packets in 10s
+2025-08-21 14:09:39 - High traffic burst from 172.20.10.2: 217 packets in 10s
+2025-08-21 14:09:39 - High traffic burst from 172.20.10.2: 218 packets in 10s
+2025-08-21 14:09:39 - High traffic burst from 172.20.10.2: 219 packets in 10s
+2025-08-21 14:09:42 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:09:42 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:09:42 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:09:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:09:42 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:09:43 - Packet sniffer: 17600 packets captured on wlan0
+2025-08-21 14:09:43 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [34818, 43653, 49926, 38028, 45584, 49941, 33174, 60313, 37917, 60191]...)
+2025-08-21 14:09:43 - Packet sniffer: 17700 packets captured on wlan0
+2025-08-21 14:09:48 - Packet sniffer: 17800 packets captured on wlan0
+2025-08-21 14:10:10 - Packet sniffer: 17900 packets captured on wlan0
+2025-08-21 14:10:15 - Packet sniffer: 18000 packets captured on wlan0
+2025-08-21 14:10:28 - Packet sniffer: 18100 packets captured on wlan0
+2025-08-21 14:10:38 - Packet sniffer: 18200 packets captured on wlan0
+2025-08-21 14:10:48 - Packet sniffer: 18300 packets captured on wlan0
+2025-08-21 14:11:00 - Packet sniffer: 18400 packets captured on wlan0
+2025-08-21 14:11:05 - Packet sniffer: 18500 packets captured on wlan0
+2025-08-21 14:11:14 - Packet sniffer: 18600 packets captured on wlan0
+2025-08-21 14:11:25 - Packet sniffer: 18700 packets captured on wlan0
+2025-08-21 14:11:36 - Packet sniffer: 18800 packets captured on wlan0
+2025-08-21 14:11:43 - Packet sniffer: 18900 packets captured on wlan0
+2025-08-21 14:12:00 - Packet sniffer: 19000 packets captured on wlan0
+2025-08-21 14:12:03 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [35328, 35843, 42504, 36360, 37390, 56336, 56211, 36634, 60444, 58781]...)
+2025-08-21 14:12:03 - Possible port scan from 52.98.16.230: 51 unique dst ports (e.g. [33664, 38790, 37640, 43658, 59662, 33680, 43664, 53266, 37654, 43670]...)
+2025-08-21 14:12:08 - Packet sniffer: 19100 packets captured on wlan0
+2025-08-21 14:12:23 - Packet sniffer: 19200 packets captured on wlan0
+2025-08-21 14:12:35 - Packet sniffer: 19300 packets captured on wlan0
+2025-08-21 14:12:47 - Packet sniffer: 19400 packets captured on wlan0
+2025-08-21 14:12:51 - Packet sniffer: 19500 packets captured on wlan0
+2025-08-21 14:12:53 - Packet sniffer: 19600 packets captured on wlan0
+2025-08-21 14:12:53 - ICMP flood suspected from 172.20.10.2: 130 ICMP packets in 10s
+2025-08-21 14:12:54 - Packet sniffer: 19700 packets captured on wlan0
+2025-08-21 14:12:55 - ICMP flood suspected from 172.20.10.2: 183 ICMP packets in 10s
+2025-08-21 14:13:01 - Packet sniffer: 19800 packets captured on wlan0
+2025-08-21 14:13:01 - Packet sniffer: 19900 packets captured on wlan0
+2025-08-21 14:13:09 - Packet sniffer: 20000 packets captured on wlan0
+2025-08-21 14:13:21 - Packet sniffer: 20100 packets captured on wlan0
+2025-08-21 14:13:24 - Packet sniffer: 20200 packets captured on wlan0
+2025-08-21 14:13:26 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [32769, 37890, 59653, 54279, 34187, 39829, 23577, 40730, 33307, 58139]...)
+2025-08-21 14:13:28 - Packet sniffer: 20300 packets captured on wlan0
+2025-08-21 14:13:34 - Packet sniffer: 20400 packets captured on wlan0
+2025-08-21 14:13:43 - Packet sniffer: 20500 packets captured on wlan0
+2025-08-21 14:13:52 - Packet sniffer: 20600 packets captured on wlan0
+2025-08-21 14:14:06 - Packet sniffer: 20700 packets captured on wlan0
+2025-08-21 14:14:08 - Possible port scan from 52.98.21.54: 51 unique dst ports (e.g. [36480, 40838, 36490, 36364, 36366, 56592, 36378, 36506, 36382, 36384]...)
+2025-08-21 14:14:15 - Packet sniffer: 20800 packets captured on wlan0
+2025-08-21 14:14:17 - Packet sniffer: 20900 packets captured on wlan0
+2025-08-21 14:14:23 - Packet sniffer: 21000 packets captured on wlan0
+2025-08-21 14:14:23 - ICMP flood suspected from 172.20.10.2: 146 ICMP packets in 10s
+2025-08-21 14:14:26 - Packet sniffer: 21100 packets captured on wlan0
+2025-08-21 14:14:26 - ICMP flood suspected from 172.20.10.2: 174 ICMP packets in 10s
+2025-08-21 14:14:27 - Packet sniffer: 21200 packets captured on wlan0
+2025-08-21 14:14:27 - Packet sniffer: 21300 packets captured on wlan0
+2025-08-21 14:14:27 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [57092, 32775, 46215, 59788, 49804, 32271, 38416, 7697, 46101, 42905]...)
+2025-08-21 14:14:28 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:28 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:14:28 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:14:28 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:14:29 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:14:29 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:14:29 - ICMP flood suspected from 172.20.10.2: 203 ICMP packets in 10s
+2025-08-21 14:14:29 - Packet sniffer: 21400 packets captured on wlan0
+2025-08-21 14:14:30 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:14:30 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:14:30 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:14:30 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:14:30 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:14:31 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:14:31 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:14:31 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:14:31 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:14:31 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:14:32 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:14:32 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:14:32 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:14:32 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:14:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:33 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:33 - Packet sniffer: 21500 packets captured on wlan0
+2025-08-21 14:14:34 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:34 - High traffic burst from 172.20.10.2: 202 packets in 10s
+2025-08-21 14:14:34 - High traffic burst from 172.20.10.2: 203 packets in 10s
+2025-08-21 14:14:34 - High traffic burst from 172.20.10.2: 204 packets in 10s
+2025-08-21 14:14:34 - High traffic burst from 172.20.10.2: 205 packets in 10s
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 206 packets in 10s
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:14:35 - Test email failed.
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 210 packets in 10s
+2025-08-21 14:14:35 - High traffic burst from 172.20.10.2: 211 packets in 10s
+2025-08-21 14:14:36 - High traffic burst from 172.20.10.2: 207 packets in 10s
+2025-08-21 14:14:36 - High traffic burst from 172.20.10.2: 208 packets in 10s
+2025-08-21 14:14:36 - High traffic burst from 172.20.10.2: 209 packets in 10s
+2025-08-21 14:14:36 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:36 - Packet sniffer: 21600 packets captured on wlan0
+2025-08-21 14:14:37 - High traffic burst from 172.20.10.2: 201 packets in 10s
+2025-08-21 14:14:37 - Packet sniffer: 21700 packets captured on wlan0
+2025-08-21 14:14:54 - Packet sniffer: 21800 packets captured on wlan0
+2025-08-21 14:15:04 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [45312, 58243, 39173, 33669, 45320, 35465, 49288, 34699, 27533, 49041]...)
+2025-08-21 14:15:04 - Packet sniffer: 21900 packets captured on wlan0
+2025-08-21 14:15:11 - Packet sniffer: 22000 packets captured on wlan0
+2025-08-21 14:15:12 - Test email failed.
+2025-08-21 14:15:12 - Packet sniffer: 22100 packets captured on wlan0
+2025-08-21 14:15:20 - Packet sniffer: 22200 packets captured on wlan0
+2025-08-21 14:15:38 - Packet sniffer: 22300 packets captured on wlan0
+2025-08-21 14:15:49 - Packet sniffer: 22400 packets captured on wlan0
+2025-08-21 14:16:01 - Packet sniffer: 22500 packets captured on wlan0
+2025-08-21 14:16:05 - Packet sniffer: 22600 packets captured on wlan0
+2025-08-21 14:16:08 - Packet sniffer: 22700 packets captured on wlan0
+2025-08-21 14:16:17 - Packet sniffer: 22800 packets captured on wlan0
+2025-08-21 14:16:24 - Packet sniffer: 22900 packets captured on wlan0
+2025-08-21 14:16:32 - Packet sniffer: 23000 packets captured on wlan0
+2025-08-21 14:16:36 - Packet sniffer: 23100 packets captured on wlan0
+2025-08-21 14:16:37 - Possible port scan from 172.20.10.1: 51 unique dst ports (e.g. [35332, 44165, 40460, 59662, 60561, 50074, 34809, 50590, 55967, 46368]...)
+2025-08-21 14:16:44 - Packet sniffer: 23200 packets captured on wlan0
+2025-08-21 14:21:23 - Test email failed.
+2025-08-21 14:41:34 - Test email failed.
+2025-08-21 15:39:01 - Email configuration updated via web UI.
+2025-08-21 15:39:10 - Test email sent.
