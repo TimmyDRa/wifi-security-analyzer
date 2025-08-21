@@ -1,22 +1,588 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>WiFi Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}WiFi Security Analyzer{% endblock %}</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Custom CSS -->
+  <style>
+    /* Include the enhanced theme CSS here */
+    :root {
+      --primary-blue: #6c9bd1;
+      --primary-red: #e85d75;
+      --light-blue: #e8f2ff;
+      --light-red: #ffe8ec;
+      --dark-blue: #4a7ba7;
+      --dark-red: #d63851;
+      --blue-accent: #b3d4f1;
+      --red-accent: #f7c2cc;
+      --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --medium-gray: #e9ecef;
+      --dark-gray: #6c757d;
+      --text-dark: #2d3748;
+      --success: #48bb78;
+      --warning: #ed8936;
+      --danger: var(--primary-red);
+      --info: var(--primary-blue);
+      --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+      --gradient-light: linear-gradient(135deg, var(--light-blue), var(--light-red));
+      --gradient-card: linear-gradient(135deg, rgba(108, 155, 209, 0.05), rgba(232, 93, 117, 0.05));
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-colored: 0 4px 15px rgba(108, 155, 209, 0.2);
+    }
+
+    body {
+      background: var(--gradient-light);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-dark);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--dark-blue);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    .header-icon {
+      font-size: 2rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    nav {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    nav .btn {
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    nav .btn:hover::before {
+      left: 100%;
+    }
+
+    nav .btn-outline-primary {
+      color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      background: var(--white);
+    }
+
+    nav .btn-outline-primary:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-colored);
+    }
+
+    nav .btn-outline-primary.active {
+      background: var(--primary-blue);
+      color: var(--white);
+      box-shadow: var(--shadow-colored);
+    }
+
+    .card {
+      border: none;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      background: var(--white);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .page-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .page-title h2 {
+      margin: 0;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .status-bar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      box-shadow: var(--shadow-md);
+      font-size: 0.875rem;
+      z-index: 1000;
+      min-width: 200px;
+    }
+
+    .loading-spinner {
+      border: 2px solid var(--light-blue);
+      border-top: 2px solid var(--primary-blue);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+      .container-fluid {
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      nav .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+      }
+      
+      .page-title {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      
+      .status-bar {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    }
+
+    /* Accessibility improvements */
+    .btn:focus,
+    .form-control:focus {
+      outline: 2px solid var(--primary-blue);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+  
+  <!-- Chart.js for visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+  
+  {% block extra_head %}{% endblock %}
 </head>
-<body class="container py-4">
-  <h1 class="mb-3">WiFi Security Analyzer</h1>
-  <nav class="mb-3">
-    <a class="btn btn-outline-primary me-2" href="{{ url_for('index') }}">Home</a>
-    <a class="btn btn-outline-primary me-2" href="{{ url_for('wifi') }}">WiFi Scan</a>
-    <a class="btn btn-outline-primary me-2" href="{{ url_for('alerts') }}">Alerts</a>
-    <a class="btn btn-outline-primary me-2" href="{{ url_for('vuln') }}">Vulnerability Scan</a>
-      <a class="btn btn-outline-primary me-2" href="{{ url_for('settings') }}">Settings</a>
-      <a class="btn btn-outline-primary me-2" href="{{ url_for('sniffer_page') }}">Sniffer</a>
-  </nav>
-  {% block content %}{% endblock %}
+<body>
+  <!-- Status Bar -->
+  <div class="status-bar" id="statusBar">
+    <div class="d-flex align-items-center justify-content-between">
+      <span id="systemStatus">
+        <span class="status-indicator online"></span>
+        System Online
+      </span>
+      <span id="currentTime"></span>
+    </div>
+  </div>
+
+  <div class="container-fluid py-4 fade-in">
+    <!-- Main Header -->
+    <div class="text-center mb-4">
+      <h1>
+        <span class="header-icon">🛡️</span>
+        WiFi Security Analyzer
+        <span class="header-icon">📡</span>
+      </h1>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="d-flex flex-wrap justify-content-center align-items-center">
+      <a class="btn btn-outline-primary {% if request.endpoint == 'index' %}active{% endif %}" href="{{ url_for('index') }}">
+        🏠 Home
+      </a>
+      <a class="btn btn-outline-primary {% if request.endpoint == 'wifi' %}active{% endif %}" href="{{ url_for('wifi') }}">
+        📶 WiFi Scan
+      </a>
+      <a class="btn btn-outline-primary {% if request.endpoint == 'alerts' %}active{% endif %}" href="{{ url_for('alerts') }}">
+        🚨 Alerts
+        <span class="badge bg-danger ms-1" id="alertBadge" style="display: none;">0</span>
+      </a>
+      <a class="btn btn-outline-primary {% if request.endpoint == 'vuln' %}active{% endif %}" href="{{ url_for('vuln') }}">
+        🔍 Vulnerability Scan
+      </a>
+      <a class="btn btn-outline-primary {% if request.endpoint == 'sniffer_page' %}active{% endif %}" href="{{ url_for('sniffer_page') }}">
+        📡 Sniffer
+      </a>
+      <a class="btn btn-outline-primary {% if request.endpoint == 'settings' %}active{% endif %}" href="{{ url_for('settings') }}">
+        ⚙️ Settings
+      </a>
+    </nav>
+    
+    <!-- Page Title Section -->
+    {% block page_header %}{% endblock %}
+    
+    <!-- Main Content -->
+    <main role="main">
+      {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-4">
+      <div class="card">
+        <div class="card-body">
+          <small class="text-muted">
+            WiFi Security Analyzer | 
+            <span id="footerTime"></span> | 
+            Made with ❤️ for network security
+          </small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Global JavaScript -->
+  <script>
+    // Update time displays
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      const dateString = now.toLocaleDateString();
+      
+      document.getElementById('currentTime').textContent = timeString;
+      document.getElementById('footerTime').textContent = `${dateString} ${timeString}`;
+    }
+
+    // Update alert count
+    function updateAlertCount() {
+      fetch('/stats')
+        .then(response => response.json())
+        .then(data => {
+          const alertBadge = document.getElementById('alertBadge');
+          const totalAlerts = Object.values(data).reduce((sum, count) => sum + (typeof count === 'number' ? count : 0), 0);
+          
+          if (totalAlerts > 0) {
+            alertBadge.textContent = totalAlerts > 99 ? '99+' : totalAlerts;
+            alertBadge.style.display = 'inline';
+          } else {
+            alertBadge.style.display = 'none';
+          }
+        })
+        .catch(error => console.log('Stats update failed:', error));
+    }
+
+    // Check system status
+    function updateSystemStatus() {
+      fetch('/system-status')
+        .then(response => response.json())
+        .then(data => {
+          const statusElement = document.getElementById('systemStatus');
+          const indicator = statusElement.querySelector('.status-indicator');
+          
+          if (data.error) {
+            indicator.className = 'status-indicator warning';
+            statusElement.innerHTML = '<span class="status-indicator warning"></span>System Warning';
+          } else {
+            const hasIssues = data.sniffer && !data.sniffer.can_sniff;
+            const emailWorking = data.email && data.email.can_connect;
+            
+            if (hasIssues) {
+              indicator.className = 'status-indicator warning';
+              statusElement.innerHTML = '<span class="status-indicator warning"></span>System Partial';
+            } else {
+              indicator.className = 'status-indicator online';
+              statusElement.innerHTML = '<span class="status-indicator online"></span>System Online';
+            }
+          }
+        })
+        .catch(error => {
+          const statusElement = document.getElementById('systemStatus');
+          const indicator = statusElement.querySelector('.status-indicator');
+          indicator.className = 'status-indicator offline';
+          statusElement.innerHTML = '<span class="status-indicator offline"></span>System Offline';
+        });
+    }
+
+    // Global notification system
+    function showNotification(message, type = 'info', duration = 5000) {
+      const notification = document.createElement('div');
+      notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+      notification.style.cssText = 'top: 80px; right: 20px; z-index: 1050; min-width: 300px;';
+      
+      notification.innerHTML = `
+        <div class="d-flex align-items-center">
+          <span class="me-2">${getNotificationIcon(type)}</span>
+          <span>${message}</span>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+        </div>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      // Auto remove after duration
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.remove();
+        }
+      }, duration);
+    }
+
+    function getNotificationIcon(type) {
+      const icons = {
+        'success': '✅',
+        'info': 'ℹ️',
+        'warning': '⚠️',
+        'danger': '❌'
+      };
+      return icons[type] || 'ℹ️';
+    }
+
+    // Loading state management
+    function setLoadingState(element, loading = true) {
+      if (loading) {
+        element.disabled = true;
+        const spinner = element.querySelector('.spinner-border') || document.createElement('span');
+        spinner.className = 'spinner-border spinner-border-sm me-2';
+        element.insertBefore(spinner, element.firstChild);
+      } else {
+        element.disabled = false;
+        const spinner = element.querySelector('.spinner-border');
+        if (spinner) spinner.remove();
+      }
+    }
+
+    // Enhanced form handling
+    function handleAsyncForm(formId, successMessage = 'Operation completed successfully') {
+      const form = document.getElementById(formId);
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          setLoadingState(submitBtn, true);
+          
+          // Show notification after delay
+          setTimeout(() => {
+            showNotification(successMessage, 'info');
+          }, 1000);
+        }
+      });
+    }
+
+    // Keyboard shortcuts
+    function setupKeyboardShortcuts() {
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey || e.metaKey) {
+          switch(e.key) {
+            case 'h':
+              e.preventDefault();
+              window.location.href = "{{ url_for('index') }}";
+              break;
+            case 'w':
+              e.preventDefault();
+              window.location.href = "{{ url_for('wifi') }}";
+              break;
+            case 'a':
+              e.preventDefault();
+              window.location.href = "{{ url_for('alerts') }}";
+              break;
+            case 'v':
+              e.preventDefault();
+              window.location.href = "{{ url_for('vuln') }}";
+              break;
+            case 's':
+              e.preventDefault();
+              window.location.href = "{{ url_for('sniffer_page') }}";
+              break;
+          }
+        }
+      });
+    }
+
+    // Initialize everything when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Start periodic updates
+      updateTime();
+      updateAlertCount();
+      updateSystemStatus();
+      
+      // Setup intervals
+      setInterval(updateTime, 1000);
+      setInterval(updateAlertCount, 30000); // Every 30 seconds
+      setInterval(updateSystemStatus, 60000); // Every minute
+      
+      // Setup keyboard shortcuts
+      setupKeyboardShortcuts();
+      
+      // Add tooltips to navigation buttons
+      const navButtons = document.querySelectorAll('nav .btn');
+      navButtons.forEach(btn => {
+        const text = btn.textContent.trim();
+        const shortcuts = {
+          '🏠 Home': 'Ctrl+H',
+          '📶 WiFi Scan': 'Ctrl+W', 
+          '🚨 Alerts': 'Ctrl+A',
+          '🔍 Vulnerability Scan': 'Ctrl+V',
+          '📡 Sniffer': 'Ctrl+S'
+        };
+        
+        if (shortcuts[text]) {
+          btn.title = `${text} (${shortcuts[text]})`;
+        }
+      });
+      
+      // Animate cards on page load
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('fade-in');
+      });
+      
+      // Show welcome message on first visit
+      if (localStorage.getItem('firstVisit') !== 'false') {
+        setTimeout(() => {
+          showNotification('Welcome to WiFi Security Analyzer! Use keyboard shortcuts for quick navigation.', 'success', 8000);
+          localStorage.setItem('firstVisit', 'false');
+        }, 1000);
+      }
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+      // Clear any ongoing operations
+      const loadingElements = document.querySelectorAll('.loading, .spinner-border');
+      loadingElements.forEach(el => el.remove());
+    });
+
+    // Service worker registration for offline support (optional)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Uncomment to enable service worker
+        // navigator.serviceWorker.register('/sw.js')
+        //   .then(reg => console.log('SW registered'))
+        //   .catch(err => console.log('SW registration failed'));
+      });
+    }
+  </script>
+  
+  {% block extra_scripts %}{% endblock %}
 </body>
 </html>

@@ -4092,3 +4092,4 @@
 2025-08-20 23:41:16 - Deauthentication frame detected: aa:bb:cc:dd:ee:02 -> aa:bb:cc:dd:ee:01
 2025-08-20 23:41:31 - Deauthentication frame detected: aa:bb:cc:dd:ee:02 -> aa:bb:cc:dd:ee:01
 2025-08-20 23:41:44 - Possible port scan from 192.168.1.100: 51 unique dst ports (e.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...)
+2025-08-21 13:35:04 - Test email failed.
