@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from scanner import get_wireless_interface, scan_wifi, parse_scan_output
-from vuln_scanner import scan_vulnerabilities
+from vuln_scanner import scan_vulnerabilities, quick_port_scan
 from utils import read_alerts, alert, ensure_logs
 from sniffer import start_sniffing
 
@@ -11,7 +11,6 @@ ensure_logs()
 # iface = get_wireless_interface()
 # if iface:
 #     start_sniffing(interface=iface)
-
 
 from flask import Response, stream_with_context
 import time, os
@@ -67,10 +66,34 @@ def vuln():
     output = None
     if request.method == "POST":
         target = request.form.get("target")
-        output = scan_vulnerabilities(target)
-        # also write to alert log as an event
+        fast_mode = request.form.get("fast") == "on"
+        
+        # Show immediate feedback
         alert(f"Vulnerability scan initiated against {target}")
+        
+        try:
+            output = scan_vulnerabilities(target, fast=fast_mode)
+            alert(f"Vulnerability scan completed for {target}")
+        except Exception as e:
+            output = f"Scan failed: {str(e)}"
+            alert(f"Vulnerability scan failed for {target}: {str(e)}")
+    
     return render_template("vuln.html", output=output)
+
+@app.route("/quick-scan", methods=["POST"])
+def quick_scan():
+    target = request.form.get("target")
+    if target:
+        alert(f"Quick port scan initiated for {target}")
+        try:
+            output = quick_port_scan(target)
+            alert(f"Quick port scan completed for {target}")
+        except Exception as e:
+            output = f"Quick scan failed: {str(e)}"
+            alert(f"Quick scan failed for {target}: {str(e)}")
+        
+        return render_template("vuln.html", output=output)
+    return redirect(url_for("vuln"))
 
 @app.route("/start-sniff")
 def start_sniff_route():
@@ -81,7 +104,6 @@ def start_sniff_route():
     start_sniffing(interface=iface)
     alert(f"Sniffer started on {iface} via web.")
     return redirect(url_for("alerts"))
-
 
 @app.route("/settings", methods=["GET", "POST"])
 def settings():
@@ -117,10 +139,8 @@ def test_email():
     alert("Test email sent." if ok else "Test email failed.")
     return redirect(url_for("alerts"))
 
-
 from sniffer import start_sniffing as _start, stop_sniffing as _stop, is_sniffing as _is_running, current_iface as _iface
 from scanner import get_wireless_interface
-from flask import jsonify
 
 @app.route("/sniffer", methods=["GET"])
 def sniffer_page():
@@ -148,8 +168,144 @@ def sniffer_stop():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    # Add these routes to your app.py file
 
-@app.route('/stats')
-def stats_api():
-    from utils import stats
-    return jsonify(stats)
+@app.route("/test-sniffing", methods=["POST"])
+def test_sniffing_capability():
+    """Test if packet sniffing can work on this system"""
+    try:
+        from sniffer import test_sniffing_capability
+        result = test_sniffing_capability()
+        
+        if result["can_sniff"]:
+            alert("Sniffing capability test: PASSED - System ready for packet sniffing")
+        else:
+            issues = "; ".join(result["issues"])
+            alert(f"Sniffing capability test: FAILED - Issues: {issues}")
+        
+        return jsonify({
+            "success": result["can_sniff"],
+            "message": "Sniffing test passed" if result["can_sniff"] else f"Issues found: {'; '.join(result['issues'])}",
+            "details": result
+        })
+    except Exception as e:
+        alert(f"Sniffing test error: {str(e)}")
+        return jsonify({
+            "success": False,
+            "message": f"Test failed: {str(e)}"
+        })
+
+@app.route("/email-test", methods=["POST"])
+def test_email_system():
+    """Test email system functionality"""
+    try:
+        from emailer import send_test_email, get_email_status
+        
+        # Get current status
+        status = get_email_status()
+        
+        if not status["enabled"]:
+            alert("Email test failed: Email alerts are disabled in configuration")
+            return jsonify({
+                "success": False,
+                "message": "Email alerts are disabled"
+            })
+        
+        if not status["can_connect"]:
+            alert(f"Email test failed: Cannot connect to SMTP server - {status['connection_message']}")
+            return jsonify({
+                "success": False, 
+                "message": f"SMTP connection failed: {status['connection_message']}"
+            })
+        
+        # Try to send test email
+        success = send_test_email()
+        
+        if success:
+            alert("Email test successful: Test email sent")
+            return jsonify({
+                "success": True,
+                "message": "Test email sent successfully"
+            })
+        else:
+            alert("Email test failed: Could not send test email")
+            return jsonify({
+                "success": False,
+                "message": "Failed to send test email - check configuration"
+            })
+            
+    except Exception as e:
+        alert(f"Email test error: {str(e)}")
+        return jsonify({
+            "success": False,
+            "message": f"Email test failed: {str(e)}"
+        })
+
+@app.route("/system-status")
+def system_status():
+    """Get comprehensive system status"""
+    try:
+        from sniffer import test_sniffing_capability, get_stats as get_sniffer_stats
+        from emailer import get_email_status
+        from utils import get_stats as get_alert_stats
+        import os
+        
+        # Sniffer status
+        sniffer_test = test_sniffing_capability()
+        sniffer_stats = get_sniffer_stats()
+        
+        # Email status
+        email_status = get_email_status()
+        
+        # Alert stats
+        alert_stats = get_alert_stats()
+        
+        # System info
+        is_root = os.geteuid() == 0
+        
+        return jsonify({
+            "sniffer": {
+                "can_sniff": sniffer_test["can_sniff"],
+                "issues": sniffer_test["issues"],
+                "detected_interface": sniffer_test["detected_interface"],
+                "current_stats": sniffer_stats
+            },
+            "email": {
+                "enabled": email_status["enabled"],
+                "can_connect": email_status["can_connect"],
+                "connection_message": email_status["connection_message"],
+                "smtp_host": email_status["smtp_host"]
+            },
+            "alerts": alert_stats,
+            "system": {
+                "is_root": is_root,
+                "python_version": os.sys.version,
+                "working_directory": os.getcwd()
+            }
+        })
+        
+    except Exception as e:
+        return jsonify({
+            "error": str(e),
+            "system": {
+                "is_root": os.geteuid() == 0 if hasattr(os, 'geteuid') else False
+            }
+        })
+
+# Update the existing stats route to include sniffer stats
+@app.route("/stats")
+def stats():
+    try:
+        from utils import get_stats as get_alert_stats
+        from sniffer import get_stats as get_sniffer_stats
+        
+        alert_stats = get_alert_stats()
+        sniffer_stats = get_sniffer_stats()
+        
+        return jsonify({
+            **alert_stats,
+            **sniffer_stats,
+            "packets_captured": sniffer_stats.get("packets_captured", 0)
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)})

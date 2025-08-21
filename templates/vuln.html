@@ -1,15 +1,173 @@
 {% extends "base.html" %}
 {% block content %}
-  <h3>Vulnerability Scan</h3>
-  <form method="post" class="mb-3">
-    <div class="mb-2">
-      <input class="form-control" name="target" placeholder="Target IP or hostname (e.g., 192.168.1.1)">
+  <h3>Network Scanner</h3>
+  
+  <!-- Quick Port Scan Section -->
+  <div class="card mb-3">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">⚡ Quick Port Scan (10-30 seconds)</h5>
     </div>
-    <button class="btn btn-primary" type="submit">Run Scan</button>
-  </form>
+    <div class="card-body">
+      <form method="post" action="/quick-scan" id="quickScanForm">
+        <div class="mb-2">
+          <input class="form-control" name="target" placeholder="Target IP (e.g., 127.0.0.1, 192.168.1.1)" required>
+        </div>
+        <button class="btn btn-success" type="submit" id="quickScanBtn">
+          <span class="btn-text">🚀 Quick Scan</span>
+          <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+        </button>
+        <small class="text-muted d-block mt-1">
+          Scans top 100 ports - perfect for quick testing and connectivity checks
+        </small>
+        <div class="mt-2">
+          <small class="text-muted">Quick fill: </small>
+          <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="fillTarget('127.0.0.1')">localhost</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="fillTarget('192.168.1.1')">router</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="fillTarget('8.8.8.8')">Google DNS</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
+  <!-- Full Vulnerability Scan Section -->
+  <div class="card mb-3">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">🔍 Vulnerability Scan (2-5 minutes)</h5>
+    </div>
+    <div class="card-body">
+      <form method="post" id="vulnForm">
+        <div class="mb-2">
+          <input class="form-control" name="target" placeholder="Target IP or hostname (e.g., 192.168.1.1)" required>
+        </div>
+        <div class="mb-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="fast" id="fastScan" checked>
+            <label class="form-check-label" for="fastScan">
+              Fast mode (recommended - scans top 1000 ports)
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-warning" type="submit" id="vulnScanBtn">
+          <span class="btn-text">🔍 Vulnerability Scan</span>
+          <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+        </button>
+        <small class="text-muted d-block mt-1">
+          ⚠️ <strong>Important:</strong> Only scan targets you own or have explicit permission to test
+        </small>
+        <div class="mt-2">
+          <small class="text-muted">Quick fill: </small>
+          <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="fillTarget('127.0.0.1')">localhost</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary me-1" onclick="fillTarget('192.168.1.1')">router</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="fillTarget('8.8.8.8')">Google DNS</button>
+        </div>
+      </form>
+      
+      <!-- Progress indicator for vulnerability scan -->
+      <div id="vulnProgress" class="mt-3 d-none">
+        <div class="alert alert-info">
+          <strong>🔍 Vulnerability scanning in progress...</strong> This may take 2-5 minutes.
+          <div class="progress mt-2">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 100%"></div>
+          </div>
+          <small class="text-muted">💡 Tip: Check the <a href="/alerts" target="_blank">Alerts page</a> for real-time progress updates</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Test Suggestions -->
+  <div class="card mb-3">
+    <div class="card-header bg-info text-white">
+      <h6 class="mb-0">💡 Suggested Test Targets</h6>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <strong>Safe Targets:</strong>
+          <ul class="list-unstyled">
+            <li>• <code>127.0.0.1</code> (localhost)</li>
+            <li>• <code>192.168.1.1</code> (your router)</li>
+            <li>• <code>8.8.8.8</code> (Google DNS)</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <strong>Quick Test:</strong>
+          <ul class="list-unstyled">
+            <li>• Start with Quick Scan</li>
+            <li>• Try localhost first</li>
+            <li>• Check alerts page</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <strong>Timing:</strong>
+          <ul class="list-unstyled">
+            <li>• Quick Scan: ~10-30 sec</li>
+            <li>• Fast Vuln: ~2-5 min</li>
+            <li>• Full Vuln: ~10-30 min</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Section -->
   {% if output %}
-    <h5>Scan Result</h5>
-    <pre class="bg-light p-3 rounded">{{ output }}</pre>
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">📊 Scan Results</h5>
+      </div>
+      <div class="card-body">
+        <pre class="bg-light p-3 rounded border" style="max-height: 500px; overflow-y: auto; font-size: 0.9em;">{{ output }}</pre>
+        <div class="mt-3">
+          <small class="text-muted">
+            💡 <strong>Tip:</strong> Check the <a href="/alerts">Alerts page</a> for scan history and notifications
+          </small>
+        </div>
+      </div>
+    </div>
   {% endif %}
+
+  <script>
+    // Quick fill buttons for common targets
+    function fillTarget(target) {
+      const inputs = document.querySelectorAll('input[name="target"]');
+      inputs.forEach(input => input.value = target);
+    }
+
+    // Handle Quick Scan form submission
+    document.getElementById('quickScanForm').addEventListener('submit', function(e) {
+      const btn = document.getElementById('quickScanBtn');
+      const spinner = btn.querySelector('.spinner-border');
+      const text = btn.querySelector('.btn-text');
+      
+      // Show loading state
+      btn.disabled = true;
+      spinner.classList.remove('d-none');
+      text.textContent = '⏳ Scanning...';
+      
+      // Auto-refresh alerts page after 2 seconds
+      setTimeout(() => {
+        window.open('/alerts', '_blank');
+      }, 2000);
+    });
+
+    // Handle Vulnerability Scan form submission
+    document.getElementById('vulnForm').addEventListener('submit', function(e) {
+      const btn = document.getElementById('vulnScanBtn');
+      const progress = document.getElementById('vulnProgress');
+      const spinner = btn.querySelector('.spinner-border');
+      const text = btn.querySelector('.btn-text');
+      
+      // Show progress indicators
+      btn.disabled = true;
+      spinner.classList.remove('d-none');
+      text.textContent = '🔍 Scanning...';
+      progress.classList.remove('d-none');
+      
+      // Auto-refresh alerts page after 2 seconds
+      setTimeout(() => {
+        window.open('/alerts', '_blank');
+      }, 2000);
+    });
+  </script>
 {% endblock %}

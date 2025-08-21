@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Packets</title>
+    <style>
+        body { font-family: monospace; background: #111; color: #0f0; }
+        #log { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>📡 Live Captured Packets</h2>
+    <div id="log"></div>
+
+    <script>
+        const logDiv = document.getElementById("log");
+        const evtSource = new EventSource("/packets/stream");
+
+        evtSource.onmessage = function(event) {
+            const line = document.createElement("div");
+            line.textContent = event.data;
+            logDiv.prepend(line);  // newest on top
+        };
+    </script>
+</body>
+</html>

@@ -1,21 +1,322 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>WiFi Security Analyzer - Sniffer</title>
-</head>
-<body>
-    <h2>Sniffer Status</h2>
-    <p><b>Packets Captured:</b> <span id="packetCount">0</span></p>
+{% extends "base.html" %}
+{% block content %}
+  <h3>Packet Sniffer Control</h3>
+  
+  <!-- System Status Check -->
+  <div class="card mb-3">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">🔍 System Status</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <strong>Root Access:</strong> <span id="rootStatus" class="badge">Checking...</span>
+        </div>
+        <div class="col-md-4">
+          <strong>Interface:</strong> <span id="interfaceStatus" class="badge">Detecting...</span>
+        </div>
+        <div class="col-md-4">
+          <strong>Sniffer Status:</strong> <span id="snifferStatus" class="badge">Checking...</span>
+        </div>
+      </div>
+      <div class="mt-2">
+        <button class="btn btn-sm btn-outline-primary" onclick="checkSystemStatus()">🔄 Refresh Status</button>
+        <button class="btn btn-sm btn-outline-info" onclick="testSniffing()">🧪 Test Sniffing</button>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        function updateStatus() {
-            fetch('/status')
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('packetCount').innerText = data.packets;
-                });
+  <!-- Sniffer Controls -->
+  <div class="card mb-3">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">📡 Packet Sniffer Controls</h5>
+    </div>
+    <div class="card-body">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <form method="post" action="/sniffer/start" id="startForm" class="d-inline">
+            <div class="mb-2">
+              <label class="form-label">Network Interface:</label>
+              <select class="form-select" name="iface" id="ifaceSelect">
+                <option value="">Auto-detect</option>
+                <option value="wlan0">wlan0</option>
+                <option value="wlp3s0">wlp3s0</option>
+                <option value="wlp2s0">wlp2s0</option>
+                <option value="wlo1">wlo1</option>
+              </select>
+            </div>
+            <button class="btn btn-success me-2" type="submit" id="startBtn">
+              <span class="btn-text">▶️ Start Sniffer</span>
+              <span class="spinner-border spinner-border-sm d-none"></span>
+            </button>
+          </form>
+          
+          <form method="post" action="/sniffer/stop" class="d-inline">
+            <button class="btn btn-danger" type="submit" id="stopBtn">
+              ⏹️ Stop Sniffer
+            </button>
+          </form>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card bg-light">
+            <div class="card-body p-3">
+              <h6>Current Status:</h6>
+              <p><strong>Running:</strong> <span id="currentStatus">Unknown</span></p>
+              <p><strong>Interface:</strong> <span id="currentIface">None</span></p>
+              <p><strong>Packets Captured:</strong> <span id="packetCount">0</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Troubleshooting Guide -->
+  <div class="card mb-3">
+    <div class="card-header bg-warning text-dark">
+      <h6 class="mb-0">⚠️ Troubleshooting Guide</h6>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <h6>Common Issues:</h6>
+          <ul class="list-unstyled">
+            <li>🔒 <strong>Permission Denied:</strong> Run Flask app as root</li>
+            <li>📡 <strong>No Interface:</strong> Check wireless adapter</li>
+            <li>🐍 <strong>Scapy Errors:</strong> Reinstall scapy</li>
+            <li>🔧 <strong>Interface Down:</strong> Bring interface up</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h6>Quick Fixes:</h6>
+          <ul class="list-unstyled">
+            <li>• <code>sudo python app.py</code></li>
+            <li>• <code>sudo ip link set wlan0 up</code></li>
+            <li>• <code>pip install --upgrade scapy</code></li>
+            <li>• <code>iwconfig</code> (check interfaces)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Statistics -->
+  <div class="card">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">📊 Live Statistics</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="text-center">
+            <h4 id="totalPackets" class="text-primary">0</h4>
+            <small>Total Packets</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h4 id="packetsPerSec" class="text-success">0</h4>
+            <small>Packets/sec</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h4 id="alertsGenerated" class="text-warning">0</h4>
+            <small>Alerts Generated</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h4 id="uptime" class="text-info">00:00</h4>
+            <small>Uptime</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-3">
+        <canvas id="packetChart" width="400" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    let updateInterval = null;
+    let startTime = null;
+    let lastPacketCount = 0;
+    let packetHistory = [];
+
+    // Initialize chart
+    const ctx = document.getElementById('packetChart').getContext('2d');
+    const packetChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Packets/sec',
+          data: [],
+          borderColor: 'rgb(75, 192, 192)',
+          backgroundColor: 'rgba(75, 192, 192, 0.1)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
         }
-        setInterval(updateStatus, 2000);
-    </script>
-</body>
-</html>
+      }
+    });
+
+    // Update sniffer status
+    function updateSnifferStatus() {
+      fetch('/sniffer/status')
+        .then(response => response.json())
+        .then(data => {
+          const running = data.running;
+          const iface = data.iface || 'None';
+          
+          document.getElementById('currentStatus').textContent = running ? '✅ Running' : '❌ Stopped';
+          document.getElementById('currentStatus').className = running ? 'text-success' : 'text-danger';
+          document.getElementById('currentIface').textContent = iface;
+          document.getElementById('snifferStatus').textContent = running ? 'Running' : 'Stopped';
+          document.getElementById('snifferStatus').className = running ? 'badge bg-success' : 'badge bg-secondary';
+          
+          // Update buttons
+          document.getElementById('startBtn').disabled = running;
+          document.getElementById('stopBtn').disabled = !running;
+          
+          if (running && !startTime) {
+            startTime = Date.now();
+          } else if (!running) {
+            startTime = null;
+          }
+        })
+        .catch(error => {
+          console.log('Status update failed:', error);
+          document.getElementById('currentStatus').textContent = '❓ Unknown';
+          document.getElementById('currentStatus').className = 'text-muted';
+        });
+    }
+
+    // Check system capabilities
+    function checkSystemStatus() {
+      // Check if we can determine root status
+      document.getElementById('rootStatus').textContent = 'Checking...';
+      document.getElementById('rootStatus').className = 'badge bg-secondary';
+      
+      // This is a simple check - in real implementation, you'd need a backend endpoint
+      fetch('/sniffer/status')
+        .then(response => response.json())
+        .then(data => {
+          // Update interface status based on response
+          if (data.iface) {
+            document.getElementById('interfaceStatus').textContent = data.iface;
+            document.getElementById('interfaceStatus').className = 'badge bg-success';
+          } else {
+            document.getElementById('interfaceStatus').textContent = 'Not detected';
+            document.getElementById('interfaceStatus').className = 'badge bg-warning';
+          }
+        });
+      
+      // Simple root check (this would need to be implemented properly)
+      document.getElementById('rootStatus').textContent = 'Unknown';
+      document.getElementById('rootStatus').className = 'badge bg-warning';
+    }
+
+    // Test sniffing capability
+    function testSniffing() {
+      alert('Testing sniffing capability...\nCheck the alerts page for test results.');
+      // This would trigger a backend test
+      fetch('/test-sniffing', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+          alert(`Test result: ${data.message || 'Test completed'}`);
+        })
+        .catch(error => {
+          alert('Test failed - check console for details');
+        });
+    }
+
+    // Update statistics
+    function updateStats() {
+      fetch('/stats')
+        .then(response => response.json())
+        .then(data => {
+          // Update packet counters
+          const currentPackets = data.packets_captured || 0;
+          document.getElementById('totalPackets').textContent = currentPackets;
+          document.getElementById('packetCount').textContent = currentPackets;
+          
+          // Calculate packets per second
+          const packetsPerSec = currentPackets - lastPacketCount;
+          document.getElementById('packetsPerSec').textContent = packetsPerSec;
+          lastPacketCount = currentPackets;
+          
+          // Update uptime
+          if (startTime) {
+            const uptime = Math.floor((Date.now() - startTime) / 1000);
+            const minutes = Math.floor(uptime / 60);
+            const seconds = uptime % 60;
+            document.getElementById('uptime').textContent = 
+              `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+          }
+          
+          // Update chart
+          const now = new Date().toLocaleTimeString();
+          packetHistory.push(packetsPerSec);
+          if (packetHistory.length > 20) {
+            packetHistory.shift();
+          }
+          
+          packetChart.data.labels = packetHistory.map((_, i) => '');
+          packetChart.data.datasets[0].data = [...packetHistory];
+          packetChart.update('none');
+          
+          // Update alerts count
+          document.getElementById('alertsGenerated').textContent = Object.keys(data).length;
+        })
+        .catch(error => {
+          console.log('Stats update failed:', error);
+        });
+    }
+
+    // Handle form submissions
+    document.getElementById('startForm').addEventListener('submit', function(e) {
+      const btn = document.getElementById('startBtn');
+      const spinner = btn.querySelector('.spinner-border');
+      const text = btn.querySelector('.btn-text');
+      
+      btn.disabled = true;
+      spinner.classList.remove('d-none');
+      text.textContent = '⏳ Starting...';
+      
+      // Open alerts page to monitor
+      setTimeout(() => {
+        window.open('/alerts', '_blank');
+      }, 2000);
+    });
+
+    // Start updates when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSnifferStatus();
+      checkSystemStatus();
+      
+      // Update every 2 seconds
+      updateInterval = setInterval(() => {
+        updateSnifferStatus();
+        updateStats();
+      }, 2000);
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+      if (updateInterval) {
+        clearInterval(updateInterval);
+      }
+    });
+  </script>
+{% endblock %}

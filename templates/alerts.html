@@ -1,45 +1,227 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>WiFi Security Analyzer - Alerts</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <h2>Alerts Dashboard</h2>
-    <p><b>Total Alerts:</b> <span id="alertCount">0</span></p>
-    <p><b>Last Alert:</b> <span id="lastAlert">None</span></p>
+{% extends "base.html" %}
+{% block content %}
+  <h3>Security Alerts Dashboard</h3>
+  
+  <!-- Real-time Stats -->
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <div class="card bg-info text-white">
+        <div class="card-body">
+          <h5>Total Alerts</h5>
+          <h2 id="alertCount">{{ alerts|length if alerts else 0 }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-warning text-dark">
+        <div class="card-body">
+          <h5>Last Alert</h5>
+          <small id="lastAlert">
+            {% if alerts %}
+              {{ alerts[0][:19] if alerts[0]|length > 19 else alerts[0] }}
+            {% else %}
+              No alerts yet
+            {% endif %}
+          </small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5>Live Stream</h5>
+          <span id="streamStatus" class="badge bg-light text-dark">Connected</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <canvas id="alertChart" width="400" height="200"></canvas>
+  <!-- Auto-refresh controls -->
+  <div class="mb-3">
+    <button class="btn btn-primary btn-sm" onclick="refreshAlerts()">🔄 Refresh Now</button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="toggleAutoRefresh()" id="autoRefreshBtn">
+      ⏸️ Pause Auto-refresh
+    </button>
+    <button class="btn btn-outline-info btn-sm" onclick="clearAlerts()">🗑️ Clear Display</button>
+    <span class="badge bg-secondary ms-2" id="refreshStatus">Auto-refreshing every 5s</span>
+  </div>
 
-    <script>
-        const ctx = document.getElementById('alertChart').getContext('2d');
-        const alertChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Alerts'],
-                datasets: [{
-                    label: 'Alert Count',
-                    data: [0],
-                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: { scales: { y: { beginAtZero: true } } }
-        });
+  <!-- Live Alerts Display -->
+  <div class="card">
+    <div class="card-header">
+      <h5>Recent Alerts (Latest First)</h5>
+      <small class="text-muted">Updates automatically - no need to refresh the page</small>
+    </div>
+    <div class="card-body">
+      <div id="alertsList">
+        {% if alerts %}
+          {% for alert in alerts %}
+            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+              <small class="text-muted">{{ alert[:19] }}</small><br>
+              <strong>{{ alert[22:] if alert|length > 22 else alert }}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="alert alert-info">
+            <strong>No alerts yet.</strong> Try running a WiFi scan or vulnerability scan to generate some alerts.
+            <div class="mt-2">
+              <a href="{{ url_for('wifi') }}" class="btn btn-sm btn-outline-primary">Run WiFi Scan</a>
+              <a href="{{ url_for('vuln') }}" class="btn btn-sm btn-outline-warning">Run Quick Scan</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      
+      <!-- Live stream area for new alerts -->
+      <div id="liveAlerts"></div>
+    </div>
+  </div>
 
-        function updateAlerts() {
-            fetch('/status')
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('alertCount').innerText = data.alerts;
-                    document.getElementById('lastAlert').innerText = data.last_alert || "None";
-                    alertChart.data.datasets[0].data[0] = data.alerts;
-                    alertChart.update();
-                });
+  <!-- Include Bootstrap JS for dismissible alerts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    let autoRefreshEnabled = true;
+    let eventSource = null;
+    let refreshInterval = null;
+
+    // Start live event stream
+    function startEventStream() {
+      if (eventSource) {
+        eventSource.close();
+      }
+      
+      eventSource = new EventSource('/alerts/stream');
+      
+      eventSource.onmessage = function(event) {
+        const alertData = event.data.trim();
+        if (alertData) {
+          addLiveAlert(alertData);
+          document.getElementById('streamStatus').textContent = 'Live';
+          document.getElementById('streamStatus').className = 'badge bg-success text-white';
         }
+      };
+      
+      eventSource.onerror = function(event) {
+        console.log('EventSource failed:', event);
+        document.getElementById('streamStatus').textContent = 'Disconnected';
+        document.getElementById('streamStatus').className = 'badge bg-danger text-white';
+        
+        // Try to reconnect after 5 seconds
+        setTimeout(() => {
+          if (autoRefreshEnabled) {
+            startEventStream();
+          }
+        }, 5000);
+      };
+    }
 
-        setInterval(updateAlerts, 3000);
-    </script>
-</body>
-</html>
+    // Add new alert to live display
+    function addLiveAlert(alertText) {
+      const liveContainer = document.getElementById('liveAlerts');
+      const alertDiv = document.createElement('div');
+      alertDiv.className = 'alert alert-success alert-dismissible fade show';
+      alertDiv.innerHTML = `
+        <small class="text-muted">${alertText.substring(0, 19)}</small><br>
+        <strong>🔴 LIVE: ${alertText.substring(22) || alertText}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      `;
+      liveContainer.insertBefore(alertDiv, liveContainer.firstChild);
+      
+      // Update counters
+      const currentCount = parseInt(document.getElementById('alertCount').textContent);
+      document.getElementById('alertCount').textContent = currentCount + 1;
+      document.getElementById('lastAlert').textContent = alertText.substring(0, 19);
+      
+      // Auto-remove after 30 seconds to prevent clutter
+      setTimeout(() => {
+        if (alertDiv.parentNode) {
+          alertDiv.remove();
+        }
+      }, 30000);
+    }
+
+    // Manual refresh function
+    function refreshAlerts() {
+      location.reload();
+    }
+
+    // Toggle auto-refresh
+    function toggleAutoRefresh() {
+      autoRefreshEnabled = !autoRefreshEnabled;
+      const btn = document.getElementById('autoRefreshBtn');
+      const status = document.getElementById('refreshStatus');
+      
+      if (autoRefreshEnabled) {
+        btn.innerHTML = '⏸️ Pause Auto-refresh';
+        status.textContent = 'Auto-refreshing every 5s';
+        startEventStream();
+        startPeriodicRefresh();
+      } else {
+        btn.innerHTML = '▶️ Resume Auto-refresh';
+        status.textContent = 'Auto-refresh paused';
+        if (eventSource) {
+          eventSource.close();
+        }
+        if (refreshInterval) {
+          clearInterval(refreshInterval);
+        }
+      }
+    }
+
+    // Periodic refresh fallback
+    function startPeriodicRefresh() {
+      if (refreshInterval) {
+        clearInterval(refreshInterval);
+      }
+      refreshInterval = setInterval(() => {
+        if (autoRefreshEnabled) {
+          // Fetch latest stats
+          fetch('/stats')
+            .then(response => response.json())
+            .then(data => {
+              // Update stats if available
+              console.log('Stats:', data);
+            })
+            .catch(error => console.log('Stats fetch failed:', error));
+        }
+      }, 5000);
+    }
+
+    // Clear alerts display (not the log file)
+    function clearAlerts() {
+      document.getElementById('alertsList').innerHTML = `
+        <div class="alert alert-info">
+          Display cleared. <button class="btn btn-sm btn-outline-primary" onclick="refreshAlerts()">Reload alerts</button>
+        </div>
+      `;
+      document.getElementById('liveAlerts').innerHTML = '';
+      document.getElementById('alertCount').textContent = '0';
+    }
+
+    // Start everything when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      if (autoRefreshEnabled) {
+        startEventStream();
+        startPeriodicRefresh();
+      }
+      
+      // Add test button if no alerts
+      const alertsList = document.getElementById('alertsList');
+      if (!alertsList.querySelector('.alert-secondary')) {
+        console.log('No alerts found, showing test options');
+      }
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+      if (eventSource) {
+        eventSource.close();
+      }
+      if (refreshInterval) {
+        clearInterval(refreshInterval);
+      }
+    });
+  </script>
+{% endblock %}

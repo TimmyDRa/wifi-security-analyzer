@@ -21,3 +21,210 @@
 2025-08-18 09:22:09 - Test email failed.
 2025-08-18 09:45:32 - Vulnerability scan initiated against 
 2025-08-18 19:01:46 - Vulnerability scan initiated against 192.168.0.1
+2025-08-20 21:17:03 - Sniffer started on wlan0 via web.
+2025-08-20 21:17:23 - Sniffer stopped via web.
+2025-08-20 21:17:31 - Sniffer started on wlan0 via web.
+2025-08-20 21:22:08 - Sniffer started on wlan0 via web.
+2025-08-20 21:22:13 - Sniffer started on wlan0 via web.
+2025-08-20 21:23:15 - Possible port scan from 192.168.0.1: 51 unique dst ports (e.g. [19456, 55043, 25990, 60550, 31369, 35857, 14866, 62740, 27029, 56596]...)
+2025-08-20 21:32:11 - iwlist scanning failed on wlan0: 255
+2025-08-20 21:33:08 - iwlist scanning failed on wlan0: 255
+2025-08-20 21:35:12 - Sniffer stopped via web.
+2025-08-20 21:35:16 - Sniffer started on wlan0 via web.
+2025-08-20 21:36:02 - Sniffer started on wlan0 via web.
+2025-08-20 21:36:04 - Sniffer stopped via web.
+2025-08-20 21:36:06 - Sniffer started on wlan0 via web.
+2025-08-20 21:36:35 - Sniffer started on wlan0 via web.
+2025-08-20 21:39:06 - Sniffer started on wlan0 via web.
+2025-08-20 21:40:00 - Sniffer started on wlan0 via web.
+2025-08-20 21:57:29 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:19 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:20 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:20 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:20 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:20 - Sniffer stopped via web.
+2025-08-20 22:01:20 - Sniffer stopped via web.
+2025-08-20 22:01:21 - Test email failed.
+2025-08-20 22:01:21 - Sniffer stopped via web.
+2025-08-20 22:01:21 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:22 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:22 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:22 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:23 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:23 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:23 - Test email failed.
+2025-08-20 22:01:23 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:23 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:24 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:24 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:24 - Sniffer started on wlan0 via web.
+2025-08-20 22:01:24 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:24 - Sniffer stopped via web.
+2025-08-20 22:01:24 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:24 - Sniffer stopped via web.
+2025-08-20 22:01:25 - Sniffer stopped via web.
+2025-08-20 22:01:25 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:25 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:25 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:26 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:26 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:26 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:01:28 - Test email failed.
+2025-08-20 22:01:28 - Test email failed.
+2025-08-20 22:01:29 - Test email failed.
+2025-08-20 22:01:29 - Test email failed.
+2025-08-20 22:01:29 - Test email failed.
+2025-08-20 22:01:30 - Test email failed.
+2025-08-20 22:01:30 - Test email failed.
+2025-08-20 22:01:30 - Test email failed.
+2025-08-20 22:01:31 - Test email failed.
+2025-08-20 22:01:31 - Test email failed.
+2025-08-20 22:01:31 - Test email failed.
+2025-08-20 22:01:32 - Test email failed.
+2025-08-20 22:02:59 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:08:13 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:08:15 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:08:38 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:39 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:39 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:39 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:39 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:39 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:40 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:40 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:40 - Test email failed.
+2025-08-20 22:08:40 - Sniffer stopped via web.
+2025-08-20 22:08:40 - Sniffer stopped via web.
+2025-08-20 22:08:40 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:08:40 - Sniffer stopped via web.
+2025-08-20 22:08:43 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:43 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:43 - Sniffer started on wlan0 via web.
+2025-08-20 22:08:44 - Test email failed.
+2025-08-20 22:08:44 - Sniffer stopped via web.
+2025-08-20 22:08:44 - Sniffer stopped via web.
+2025-08-20 22:08:44 - Sniffer stopped via web.
+2025-08-20 22:08:46 - Test email failed.
+2025-08-20 22:08:46 - Test email failed.
+2025-08-20 22:08:46 - Test email failed.
+2025-08-20 22:08:47 - Test email failed.
+2025-08-20 22:08:47 - Test email failed.
+2025-08-20 22:08:48 - Test email failed.
+2025-08-20 22:09:12 - Test email failed.
+2025-08-20 22:09:12 - Test email failed.
+2025-08-20 22:09:13 - Test email failed.
+2025-08-20 22:09:13 - Test email failed.
+2025-08-20 22:09:13 - Test email failed.
+2025-08-20 22:09:14 - Test email failed.
+2025-08-20 22:13:14 - Nmap scan timed out after 5 minutes for 127.0.0.1
+2025-08-20 22:13:15 - Nmap scan timed out after 5 minutes for 127.0.0.1
+2025-08-20 22:13:19 - Vulnerability scan completed for 127.0.0.1
+2025-08-20 22:13:20 - Vulnerability scan completed for 127.0.0.1
+2025-08-20 22:13:46 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:13:49 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:13:50 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:13:51 - Vulnerability scan initiated against 127.0.0.1
+2025-08-20 22:14:13 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:13 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:14 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:14 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:15 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:15 - Sniffer stopped via web.
+2025-08-20 22:14:16 - Sniffer stopped via web.
+2025-08-20 22:14:16 - Test email failed.
+2025-08-20 22:14:16 - Test email failed.
+2025-08-20 22:14:16 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:17 - Sniffer stopped via web.
+2025-08-20 22:14:17 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:18 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:18 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:18 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:19 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:19 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:20 - Sniffer stopped via web.
+2025-08-20 22:14:20 - Sniffer stopped via web.
+2025-08-20 22:14:21 - Sniffer stopped via web.
+2025-08-20 22:14:21 - Sniffer stopped via web.
+2025-08-20 22:14:21 - Test email failed.
+2025-08-20 22:14:22 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:22 - Sniffer stopped via web.
+2025-08-20 22:14:22 - Sniffer stopped via web.
+2025-08-20 22:14:23 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:24 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:24 - Test email failed.
+2025-08-20 22:14:24 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:25 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:25 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:26 - Sniffer started on wlan0 via web.
+2025-08-20 22:14:27 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:27 - Sniffer stopped via web.
+2025-08-20 22:14:27 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:28 - Sniffer stopped via web.
+2025-08-20 22:14:28 - Sniffer stopped via web.
+2025-08-20 22:14:29 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:31 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:31 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:31 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:32 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:32 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:32 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:33 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:34 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:36 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:36 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:37 - Test email failed.
+2025-08-20 22:14:37 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:14:38 - Test email failed.
+2025-08-20 22:14:38 - Test email failed.
+2025-08-20 22:14:39 - Test email failed.
+2025-08-20 22:14:40 - Test email failed.
+2025-08-20 22:14:41 - Test email failed.
+2025-08-20 22:14:41 - Test email failed.
+2025-08-20 22:14:41 - Test email failed.
+2025-08-20 22:14:43 - Test email failed.
+2025-08-20 22:14:43 - Test email failed.
+2025-08-20 22:14:44 - Test email failed.
+2025-08-20 22:14:44 - Test email failed.
+2025-08-20 22:14:45 - Test email failed.
+2025-08-20 22:14:45 - Test email failed.
+2025-08-20 22:14:46 - Test email failed.
+2025-08-20 22:14:46 - Test email failed.
+2025-08-20 22:14:46 - Test email failed.
+2025-08-20 22:14:47 - Test email failed.
+2025-08-20 22:14:47 - Test email failed.
+2025-08-20 22:14:47 - Test email failed.
+2025-08-20 22:14:48 - Test email failed.
+2025-08-20 22:14:48 - Test email failed.
+2025-08-20 22:14:49 - Test email failed.
+2025-08-20 22:14:49 - Test email failed.
+2025-08-20 22:15:52 - Vulnerability scan initiated against 8.8.8.8
+2025-08-20 22:15:56 - Vulnerability scan initiated against 8.8.8.8
+2025-08-20 22:15:59 - Vulnerability scan initiated against 8.8.8.8
+2025-08-20 22:20:34 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:20:40 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:21:40 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:21:40 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:23:14 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:23:16 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:24:07 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:24:09 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:24:15 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:24:16 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:24:22 - Quick port scan initiated for 192.168.1.1
+2025-08-20 22:24:24 - Quick port scan completed for 192.168.1.1
+2025-08-20 22:24:42 - Quick port scan initiated for 127.0.0.1
+2025-08-20 22:24:42 - Quick port scan completed for 127.0.0.1
+2025-08-20 22:28:13 - Sniffer started on wlan0 via web.
+2025-08-20 22:30:08 - iwlist scanning failed on wlan0: 255
+2025-08-20 22:35:23 - Starting packet sniffer on interface wlan0
+2025-08-20 22:35:31 - Packet sniffer started successfully on wlan0 (AsyncSniffer mode)
+2025-08-20 22:35:33 - Sniffer started on wlan0 via web.
+2025-08-20 22:35:48 - Packet sniffer: 100 packets captured on wlan0
+2025-08-20 22:36:09 - Packet sniffer: 200 packets captured on wlan0
+2025-08-20 22:36:34 - Packet sniffer: 300 packets captured on wlan0
+2025-08-20 22:36:48 - Packet sniffer: 400 packets captured on wlan0
+2025-08-20 22:36:50 - Packet sniffer: 500 packets captured on wlan0
+2025-08-20 22:36:55 - Packet sniffer: 600 packets captured on wlan0
+2025-08-20 22:37:27 - Packet sniffer: 700 packets captured on wlan0
+2025-08-20 22:37:42 - Packet sniffer: 800 packets captured on wlan0
+2025-08-20 22:37:52 - Packet sniffer: 900 packets captured on wlan0
